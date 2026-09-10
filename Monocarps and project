@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+#define ll long long int
+int main(){
+    ll x,y,m; 
+    cin>>x>>y>>m;
+    ll ans=0;
+    int q=1;
+    int c=0;
+    while(c<m){
+        ll rem=(y+c)%(x+c);
+        if(rem==y-x){
+            break;
+        }
+        ans+=rem;
+        c++;
+    }
+    if(m>c){
+        ans+=(m-c)*(y-x);
+    }
+        
+    
+    cout<<ans<<endl;
+    
+}
